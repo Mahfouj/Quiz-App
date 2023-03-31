@@ -25,8 +25,7 @@ import java.util.*
 
 
                 binding.playbtn.setOnClickListener{
-                  var intent= Intent(this,playActivity::class.java)
-
+                  var intent=Intent(this,playActivity::class.java)
                     startActivity(intent)
 
               }

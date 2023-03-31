@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-   android:orientation="vertical"
+    android:background="#00BCD4"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".playActivity">
 
@@ -19,21 +21,21 @@
              android:includeFontPadding="false"
              />
            <LinearLayout
+
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                >
 
            <TextView
-            android:layout_margin="16dp"
-               android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+               android:layout_margin="8dp"
+               android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                android:fontFamily="@font/akaya_telivigala"
                android:id="@+id/scoretv"
                android:layout_width="wrap_content"
-               android:layout_height="match_parent"
+               android:layout_height="wrap_content"
                android:textColor="@color/black"
                android:text="score:00"
-               android:textSize="29dp"
                android:layout_weight="1"
                android:gravity="center"
                />
@@ -41,14 +43,13 @@
 
                <TextView
                    android:id="@+id/countTv"
-                  android:layout_margin="16dp"
-                   android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                   android:layout_margin="8dp"
+                   android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                    android:fontFamily="@font/akaya_telivigala"
                    android:layout_width="wrap_content"
-                   android:layout_height="match_parent"
+                   android:layout_height="wrap_content"
                    android:textColor="@color/black"
-                   android:text="1/10"
-                   android:textSize="30dp"
+                   android:text="1/5"
                    android:layout_weight="1"
                    android:gravity="center"
                    />
@@ -60,12 +61,11 @@
              android:layout_height="wrap_content"
              android:text="Time.00"
              android:gravity="center"
-             android:textSize="29dp"
-             android:textAppearance="@style/Widget.Material3.MaterialTimePicker.Display"
+             android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
              android:fontFamily="@font/akaya_telivigala"
-            android:layout_margin="19dp"
-            android:includeFontPadding="false"
-            android:textColor="#3F51B5"
+             android:layout_margin="19dp"
+             android:includeFontPadding="false"
+             android:textColor="@color/black"
          />
 
 
@@ -73,94 +73,93 @@
         android:id="@+id/qustv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="19dp"
-        android:background="@drawable/back_19radious"
+        android:layout_margin="10dp"
+        android:background="@drawable/back_16radious"
         android:fontFamily="@font/akaya_telivigala"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="8dp"
         android:text="I love you"
-        android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:textColor="#DA291C"
         android:textStyle="bold" />
 
     <RadioGroup
+
+        android:id="@+id/QuizGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/qes1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="20dp"
-            >
+            android:layout_margin="8dp"
+            android:background="@drawable/back_19radious"
+            android:fontFamily="@font/akaya_telivigala"
+            android:includeFontPadding="false"
+            android:text="Option"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
+            android:textColor="@color/red" />
 
-         <RadioButton
-             android:id="@+id/qes1"
-             android:includeFontPadding="false"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:text="Option"
-             android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
-             android:textColor="@color/red"
-             android:background="@drawable/back_19radious"
-             android:layout_margin="19dp"
-             android:fontFamily="@font/akaya_telivigala"
-             />
+        <RadioButton
+            android:id="@+id/qes2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/back_19radious"
+            android:fontFamily="@font/akaya_telivigala"
+            android:includeFontPadding="false"
+            android:text="Option"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
+            android:textColor="@color/red"
 
-            <RadioButton
-                android:includeFontPadding="false"
-                android:id="@+id/qes2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Option"
-                android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
-                android:textColor="@color/red"
-                android:background="@drawable/back_19radious"
-                android:layout_margin="19dp"
-                android:fontFamily="@font/akaya_telivigala"
+            />
 
-                />
+        <RadioButton
 
-            <RadioButton
+            android:id="@+id/qes3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/back_19radious"
+            android:fontFamily="@font/akaya_telivigala"
+            android:includeFontPadding="false"
+            android:text="Option"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
+            android:textColor="@color/red" />
 
-                android:id="@+id/qes3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Option"
-                android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
-                android:textColor="@color/red"
-                android:background="@drawable/back_19radious"
-                android:layout_margin="19dp"
-                android:includeFontPadding="false"
-                android:fontFamily="@font/akaya_telivigala"
-                />
+        <RadioButton
+            android:id="@+id/qes4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/back_19radious"
+            android:fontFamily="@font/akaya_telivigala"
+            android:includeFontPadding="false"
+            android:text="Option"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
+            android:textColor="@color/red"
 
-            <RadioButton
-                android:id="@+id/qes4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Option"
-                android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
-                android:textColor="@color/red"
-                android:background="@drawable/back_19radious"
-                android:layout_margin="19dp"
-                android:includeFontPadding="false"
-                android:fontFamily="@font/akaya_telivigala"
+            />
 
-                 />
+    </RadioGroup>
 
-        </RadioGroup>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonnext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="19dp"
+        android:background="@drawable/back_16radious"
+        android:fontFamily="@font/akaya_telivigala"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Play Next"
+        android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+        android:textStyle="bold"
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/buttonnext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="19dp"
-                    android:background="@drawable/back_19radious"
-                    android:text="Play Next"
-                    android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
-                    android:fontFamily="@font/akaya_telivigala"
-                    android:textStyle="bold"
-                    android:includeFontPadding="false"
-                    />
+        />
 
 
-
-
-</LinearLayout>
+ </LinearLayout>
