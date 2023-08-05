@@ -103,7 +103,7 @@ class playActivity : AppCompatActivity() {
 
                 val checkButton = findViewById<RadioButton>(QuizGroup.checkedRadioButtonId)
 
-                var checkAnwser = checkButton.text.toString()
+                val checkAnwser = checkButton.text.toString()
 
                 if (checkAnwser == quizlist[qIndex].RightAnswer) {
                     Correct++
@@ -131,7 +131,9 @@ class playActivity : AppCompatActivity() {
 
     }
 
-        fun startCountDownTimer() {
+
+
+        private fun startCountDownTimer() {
             countDownTimer = object : CountDownTimer(Milisleftsec, 1000) {
                 override fun onTick(millisUntilFinished: Long) {
                     Milisleftsec = millisUntilFinished
@@ -153,10 +155,11 @@ class playActivity : AppCompatActivity() {
 
 
 
-          fun showAlertDailog(message:String){
+          private fun showAlertDailog(message:String){
 
               val builder =AlertDialog.Builder(this,)
               builder.setTitle(message)
+ 
 
          builder.setPositiveButton("ok",object :DialogInterface.OnClickListener{
              override fun onClick(dialog: DialogInterface?, Which: Int) {
@@ -165,7 +168,7 @@ class playActivity : AppCompatActivity() {
                       countDownTimer?.cancel()
 
 
-                       var intent = Intent(this@playActivity,ResultActivity::class.java)
+                       val intent = Intent(this@playActivity,ResultActivity::class.java)
 
                       intent.putExtra("skip",Skip)
                       intent.putExtra("right",Correct)
@@ -204,6 +207,7 @@ private fun AlertDialog.Builder.setPositiveButton(
     onClickListener: DialogInterface.OnClickListener,
     function: () -> Unit
 ) {
+
 
 
 }
